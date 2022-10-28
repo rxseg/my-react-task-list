@@ -1,9 +1,14 @@
-import { VscAdd } from "react-icons/vsc";
-export const TaskList = () => {
+import { TaskCard } from "../TaskCard";
+import "../App.css";
+export const TaskList = ({ tasks, deleteTask, editTask }) => {
+  if (tasks.length === 0) {
+    return <h5 className="notarea">No hay tareas aún</h5>;
+  }
   return (
-    <div className="container-texto">
-      <input className="texto" placeholder="Add your new todo" />
-      <button className="btn"><VscAdd/></button>
+    <div className="mapeo">
+      {tasks.map((task) => (
+        <TaskCard key={task.id} task={task} deleteTask={deleteTask} editTask={editTask} />
+      ))}
     </div>
   );
 };

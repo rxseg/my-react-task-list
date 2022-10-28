@@ -1,14 +1,18 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .main-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:AUTO;
+  margin:auto;
   padding-top: 10px;
-  
   width: 40vh;
-  height: 45vh;
-  box-sizing: border-box;
-  box-shadow: 0 0 10px gray;
+  height: auto;
+  border: 1px solid;
+  border-radius: 5px;
 }
 .sub-container{
   /* background-color: gray; */
@@ -28,8 +32,13 @@ h1{
   width: 80%;
   margin: 6px;
 }
+.textarea{
+  outline-color: gray;
+  padding: 6px;
+  width: 303px;
+  margin: 6px;
+}
 .btn{
-  cursor: pointer;
   border: none;
   margin: 2px;
   width: 30px;
@@ -43,19 +52,65 @@ h1{
 .btn:hover{
   background-color: rgb(0, 120, 255);
 }
+
 .in-tasks{
 display: flex;
 background-color: rgb(241, 241, 241);
+justify-content: space-between;
 border-radius: 6px;
 margin: 6px;
 }
-.radio:checked::after{
+.junto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio{
   cursor: pointer;
-  color: rgb(243, 26, 26);
+  display: flex;
+  margin: auto;
+  margin-left: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .p{
   font-size: 15px;
+  margin-left: 10px;
+}
+.p2{
+  font-size: 11px;
+  margin-left: 10px;
+  color: gray;
+}
+.btndiv{
+  display: flex;
+  justify-content: center;
+  
+}
+.delete2{
+  display: flex;
+  margin: auto;
+  width: 25px;
+  height: 50px;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  margin-right: 5px;
+  color: red;
+  cursor: pointer;
+}
+.editar{
+  display: flex;
+  margin: auto;
+  width: 25px;
+  margin-right: 5px;
+  height: 50px;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  color: blue;
+  cursor: pointer;
 }
 .delete{
   background-color: rgb(255, 71, 71);
@@ -72,4 +127,23 @@ margin: 6px;
 }
 .delete:hover{
   background-color: rgb(255, 30, 30);
+}
+.notarea{
+  margin: auto;
+  height: 100px;
+}
+.tasks{
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  margin-bottom: auto;
+}
+.mapeo{
+  height: 100%;
+}
+@media (max-width: 40px){
+  .textarea{
+    width: 70%;
+  }
+  
 }
