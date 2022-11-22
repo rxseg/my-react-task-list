@@ -1,0 +1,102 @@
+/*container tarea*/
+div.caj1 {
+  width: 100%;
+  height: 50%;
+  color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.caj2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  /* overflow-y:scroll;
+    scroll-behavior: smooth; */
+}
+div.list {
+  margin: 8px;
+  width: 81%;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 2px;
+  display: flex;
+}
+p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  color: black;
+}
+/*input*/
+div.input {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(0, 0, 0);
+}
+.label {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: 20%;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.label-underline {
+  text-decoration: line-through;
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: 20%;
+  border-radius: 2px;
+}
+h5 {
+  color: black;
+  text-align: center;
+  font-size: 12px;
+}
+.texto {
+  width: 90%;
+  background-color: rgb(66, 173, 66);
+  padding: 5px;
+  margin: 0;
+}
+/*iconos*/
+div.iconos {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.icono1 {
+  color: green;
+  margin-left: auto;
+}
+.icono2 {
+  color: red;
+  margin-left: auto;
+}
+input.agregar {
+  width: 50%;
+  text-align: center;
+  background-color: rgb(197, 197, 197);
+  color: black;
+  border-radius: 15px;
+  margin-left: 35px;
+}
+button.edi {
+  background-color: rgb(0, 60, 255);
+  border-radius: 20px;
+}

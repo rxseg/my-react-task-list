@@ -1,0 +1,43 @@
+.cajita {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.pendiente {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+h3 {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.boton {
+  display: flex;
+  float: right;
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 10px 10px 80px;
+  height: 75px;
+  padding: 10px;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  color: black;
+  background-color: transparent;
+  border: 2px solid rgb(255, 48, 48);
+  margin: auto;
+  padding: 10px;
+  border-radius: 7px;
+}
+.btn:hover {
+  background-color: rgb(255, 48, 48);
+  color: snow;
+  transition: 0.1s linear;
+}

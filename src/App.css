@@ -1,0 +1,47 @@
+#root {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  width: 20vw;
+  height: auto;
+  margin: auto;
+  border-radius: 2px;
+  background-color: snow;
+}
+@media (min-width: 0px) {
+  .container {
+    width: auto;
+
+    height: auto;
+    border-radius: 2px;
+    background-color: snow;
+  }
+}
+@media (min-width: 400px) {
+  .container {
+    width: 80vw;
+
+    height: auto;
+    border-radius: 2px;
+    background-color: snow;
+  }
+}
+@media (min-width: 600px) {
+  .container {
+    width: 40vw;
+
+    height: auto;
+    border-radius: 2px;
+    background-color: snow;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    width: 22vw;
+
+    height: auto;
+    border-radius: 2px;
+    background-color: snow;
+  }
+}
