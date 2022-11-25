@@ -7,7 +7,12 @@ export const TaskList = ({ tasks, deleteTask, editTask }) => {
   return (
     <div className="mapeo">
       {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} deleteTask={deleteTask} editTask={editTask} />
+        <TaskCard
+          key={(task.title, task.description)}
+          task={task}
+          deleteTask={deleteTask}
+          editTask={editTask}
+        />
       ))}
     </div>
   );

@@ -6,19 +6,28 @@ import { useState, useEffect } from "react";
 import { VscReplace } from "react-icons/vsc";
 
 export const App = () => {
+  const [error, setError] = useState(false);
   const [tasks, setTasks] = useState([]);
   useEffect(() => {
     setTasks(data);
   }, []);
-  const createTask = (task) => {
-    setTasks([
-      ...tasks,
-      {
-        title: task.title,
-        id: tasks.length,
-        description: task.description,
-      },
-    ]);
+  const createTask = (datos) => {
+    const bool = tasks.some((task) => datos.title === task.title);
+    if (!tasks.find((task) => task.title === datos.title)) {
+      setTasks([
+        ...tasks,
+        {
+          title: datos.title,
+          id: tasks.length,
+          description: datos.description,
+        },
+      ]);
+      setError(false)
+    } else if (bool) {
+      setError(true);
+    } else {
+      setError(false);
+    }
   };
   const deleteTask = (TaskId) => {
     setTasks(tasks.filter((task) => task.id !== TaskId));
@@ -57,6 +66,13 @@ export const App = () => {
         <h1>Todo App</h1>
         <TaskForm createTask={createTask} />
         <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask} />
+        {error ? (
+          <span className="error" role="alert">
+            El título de esta tarea ya existe pá
+          </span>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
