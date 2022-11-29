@@ -5,6 +5,7 @@ import { TaskForm } from "./Componentes/TaskForm";
 import { tasks as data } from "./tareas";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Box, Button } from "@chakra-ui/react";
 
 function Task() {
   const [error, setError] = useState(false);
@@ -62,7 +63,16 @@ function Task() {
   }, [tasks]);
   return (
     <div className="main-container">
-      <div className="sub-container">
+      <Box
+        display="flex"
+        flexDirection="column"
+        w="20vw"
+        p="16px"
+        h="auto"
+        borderWidth="1px"
+        borderRadius="lg"
+        overflow="hidden"
+      >
         <h1>Todo App</h1>
         <TaskForm createTask={createTask} />
         <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask} />
@@ -73,10 +83,12 @@ function Task() {
         ) : (
           <></>
         )}
-      </div>
+      </Box>
       <div className="div-task">
         <Link to="/Home">
-          <button className="button-task">Volver</button>
+          <Button p="10px" colorScheme="whatsapp">
+            Volver
+          </Button>
         </Link>
       </div>
     </div>

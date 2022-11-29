@@ -1,10 +1,17 @@
 import { VscEdit, VscRemove } from "react-icons/vsc";
-
+import { Checkbox } from "@chakra-ui/react";
+import { useState } from "react";
 export const TaskCard = ({ task, deleteTask, editTask }) => {
+  const [checkedItems, setCheckedItems] = useState(false);
   return (
     <div className="in-tasks">
       <div className="junto">
-        <input type="radio" className="radio" />
+        <Checkbox
+          isChecked={checkedItems}
+          onChange={(e) => setCheckedItems([e.target.checked, !checkedItems])}
+          colorScheme="green"
+          defaultChecked
+        ></Checkbox>
         <p className="p">{task.title}</p>
         <p className="p2">{task.description}</p>
       </div>

@@ -1,5 +1,5 @@
-import { VscAdd } from "react-icons/vsc";
 import { useState } from "react";
+import { Button, FormControl, Input, Textarea } from "@chakra-ui/react";
 
 export const TaskForm = ({ createTask }) => {
   const [title, setTitle] = useState("");
@@ -20,28 +20,38 @@ export const TaskForm = ({ createTask }) => {
   };
   return (
     <form className="container-texto" onSubmit={handleSubmit}>
-      <input
-        className="texto"
-        placeholder="Add your new todo"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      {error ? (
-        <span className="error" role="alert">
-          La tarea debe tener al menos 3 o más caractéres
-        </span>
-      ) : (
-        <></>
-      )}
-      <textarea
-        className="textarea"
-        placeholder="Add a description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      ></textarea>
-      <div className="div-btnadd">
-        <button className="btn">Agregar</button>
-      </div>
+      <FormControl
+        display="flex"
+        flexDirection="column"
+        w="100%"
+        justifyItems="center"
+        alignItems="center"
+      >
+        <Input
+          className="texto"
+          placeholder="Add your new todo"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        {error ? (
+          <span className="error" role="alert">
+            La tarea debe tener al menos 3 o más caractéres
+          </span>
+        ) : (
+          <></>
+        )}
+        <Textarea
+          className="textarea"
+          placeholder="Add a description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        ></Textarea>
+        <div className="div-btnadd">
+          <Button type="submit" colorScheme="messenger">
+            Agregar
+          </Button>
+        </div>
+      </FormControl>
     </form>
   );
 };
