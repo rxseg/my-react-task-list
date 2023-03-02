@@ -1,28 +1,49 @@
-import { VscEdit, VscRemove } from "react-icons/vsc";
-import { Checkbox } from "@chakra-ui/react";
-import { useState } from "react";
+import { Box, Button, Text } from "@chakra-ui/react";
 export const TaskCard = ({ task, deleteTask, editTask }) => {
-  const [checkedItems, setCheckedItems] = useState(false);
+  console.log(task);
+
   return (
-    <div className="in-tasks">
-      <div className="junto">
-        <Checkbox
-          isChecked={checkedItems}
-          onChange={(e) => setCheckedItems([e.target.checked, !checkedItems])}
-          colorScheme="green"
-          defaultChecked
-        ></Checkbox>
-        <p className="p">{task.title}</p>
-        <p className="p2">{task.description}</p>
-      </div>
-      <div className="btndiv">
-        <button className="delete2" onClick={() => deleteTask(task.id)}>
-          <VscRemove />
-        </button>
-        <button className="editar" onClick={() => editTask(task.id)}>
-          <VscEdit />
-        </button>
-      </div>
-    </div>
+    <Box
+      display="flex"
+      w="100%"
+      alignItems="center"
+      borderWidth="1px"
+      flexDirection={"column"}
+      borderRadius="lg"
+      overflow="hidden"
+      padding={"10px"}
+      marginBottom="10px"
+    >
+      <Box display={"flex"} width={"100%"} flexDirection="column">
+        <Box display={"flex"} flexDirection="column">
+          <Text fontWeight={"700"}>Tarea:</Text>
+          <Text>{task.nombre}</Text>
+        </Box>
+        <Box display={"flex"} flexDirection="column">
+          <Text fontWeight={"700"}>Descripción:</Text>
+          <Text>{task.descripcion}</Text>
+        </Box>
+      </Box>
+      <Box display={"flex"} gap="5px" width={"100%"}>
+        <Button
+          size="xs"
+          colorScheme={"red"}
+          onClick={() => {
+            deleteTask(task.id);
+          }}
+        >
+          <Text>Delete</Text>
+        </Button>
+        <Button
+          size="xs"
+          colorScheme={"yellow"}
+          onClick={() => {
+            editTask(task.id);
+          }}
+        >
+          <Text>Edit</Text>
+        </Button>
+      </Box>
+    </Box>
   );
 };

@@ -24,7 +24,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: snow;
   margin: 10px;
 }
 .link-nav {
@@ -55,12 +54,10 @@ h1 {
 }
 .texto {
   background-color: snow;
-  outline-color: gray;
   padding: 6px;
   width: 98%;
   margin: 6px;
   border: 1px solid black;
-  color: black;
 }
 .div-db {
   display: flex;
@@ -70,11 +67,9 @@ h1 {
 .textarea {
   border: 1px solid black;
   background-color: snow;
-  outline-color: gray;
   padding: 6px;
   width: 98%;
   margin: 6px;
-  color: black;
 }
 .div-btnadd {
   margin: 0px 0px 6px 0px;
@@ -113,7 +108,6 @@ h1 {
 }
 .in-tasks {
   display: flex;
-  background-color: rgb(241, 241, 241);
   justify-content: space-between;
   border-radius: 6px;
   margin: 6px;
@@ -145,11 +139,11 @@ h1 {
   padding: 6px;
   justify-content: center;
   text-align: center;
-  color: gray;
 }
 .btndiv {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .delete2 {
   display: flex;
@@ -162,7 +156,6 @@ h1 {
   margin-right: 5px;
   color: red;
   cursor: pointer;
-  background-color: rgb(180, 180, 180);
 }
 .editar {
   display: flex;
@@ -173,9 +166,8 @@ h1 {
   align-items: center;
   border-radius: 5%;
   border: none;
-  color: blue;
+  color: rgb(130, 130, 255);
   cursor: pointer;
-  background-color: rgb(180, 180, 180);
 }
 .delete2:hover {
   background-color: rgb(140, 140, 140);
@@ -215,8 +207,11 @@ svg {
   margin-bottom: auto;
 }
 .mapeo {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 .error {
   color: red;
